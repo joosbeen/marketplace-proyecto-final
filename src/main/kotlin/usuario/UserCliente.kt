@@ -122,8 +122,9 @@ class UserCliente(id: Long = Date().time, nombre: String, correo: String, contra
 
         when (opcion) {
             "1" -> {
+                agregando_carrito()
                 Productos.addCart(producto)
-                mensajeTitulo("SE AGREGO AL CARRITO!")
+//                mensajeTitulo("SE AGREGO AL CARRITO!")
                 showMenu()
             }
 
@@ -231,4 +232,15 @@ val printDetail: (MutableList<Producto>) -> Unit = {
     it.forEach {
         println("Clave: ${it.id}, Nombre: ${it.nombre}, Precio: $ ${it.precio}, Descripcion: ${it.descripcion}")
     }
+}
+
+
+private fun agregando_carrito() {
+    val thread = Thread(Runnable {
+        println("Agregando al carrito...")
+        Thread.sleep(1690)
+        println("Se agrego al carrito.")
+    })
+
+    thread.start()
 }
