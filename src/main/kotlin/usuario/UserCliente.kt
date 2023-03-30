@@ -206,11 +206,8 @@ class UserCliente(id: Long = Date().time, nombre: String, correo: String, contra
             val venta = Venta(1, carritoProductos, SesionUser.user!!)
             HistorialVentas.add(venta)
 
-            println("Compra en proceso.")
-            println("Compra en proceso..")
-            println("Compra en proceso...")
-            println("Compra en proceso....")
-            println("Compra exiosa!")
+            comprando_productos()
+            println("Espere un segundo...\n")
             Carrito.clear()
 
         }
@@ -236,6 +233,7 @@ val printDetail: (MutableList<Producto>) -> Unit = {
 
 
 private fun agregando_carrito() {
+
     val thread = Thread(Runnable {
         println("Agregando al carrito...")
         Thread.sleep(1690)
@@ -247,7 +245,7 @@ private fun agregando_carrito() {
 
 private fun comprando_productos() {
     val thread = Thread(Runnable {
-        println("Compra en proceso...")
+        println("Procesando compra...")
         Thread.sleep(1400)
         println("Se realizo la compra con exito.!")
     })
