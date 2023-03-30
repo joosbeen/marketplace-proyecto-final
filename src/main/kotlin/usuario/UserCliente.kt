@@ -8,6 +8,7 @@ import sesion.SesionUser
 import utileria.*
 import ventas.HistorialVentas
 import ventas.Venta
+import java.text.SimpleDateFormat
 import java.util.*
 
 /**
@@ -203,7 +204,7 @@ class UserCliente(id: Long = Date().time, nombre: String, correo: String, contra
             )
 
             println("=== Total = $${total}")
-            val venta = Venta(1, carritoProductos, SesionUser.user!!)
+            val venta = Venta(1, getDateNow(),  carritoProductos, SesionUser.user!!)
             HistorialVentas.add(venta)
 
             println("Compra en proceso.")
@@ -243,4 +244,10 @@ private fun agregando_carrito() {
     })
 
     thread.start()
+}
+
+val getDateNow: () -> String = {
+    val now = Date()
+    val formatDate = SimpleDateFormat("dd/mm/yyyy")
+    formatDate.format(now)
 }

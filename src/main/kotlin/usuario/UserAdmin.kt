@@ -44,6 +44,7 @@ class UserAdmin(id: Long = Date().time, nombre: String, correo: String, contrase
             val venta: Venta = it
             println("|---------------------")
             println("| Folio: ${it.id}")
+            println("| Fecha: ${it.fecha}")
             println("| Cliente: Nombre=${it.usuario.nombre}, Correo=${it.usuario.correo}")
             println("|---------------------")
             it.productos.forEach {

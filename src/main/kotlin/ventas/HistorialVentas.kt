@@ -3,12 +3,15 @@ package ventas
 import producto.Producto
 import producto.Productos
 import usuario.UserCliente
+import java.text.SimpleDateFormat
+import java.util.logging.SimpleFormatter
 
 object HistorialVentas {
 
     private var ventas = mutableListOf(
         Venta(
             id = 230,
+            fecha= "12/02/2023",
             productos = mutableListOf(
                 Productos.findAll()[0],
                 Productos.findAll()[1],
@@ -18,6 +21,7 @@ object HistorialVentas {
         ),
         Venta(
             id = 231,
+            fecha= "13/02/2023",
             productos = mutableListOf(
                 Productos.findAll()[3],
                 Productos.findAll()[4]

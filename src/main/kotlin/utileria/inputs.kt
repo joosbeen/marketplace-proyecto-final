@@ -32,7 +32,12 @@ fun inputRequiered(lblTitulo: String, lblError: String, lblTituloIntento: String
  *  opciones: Lista de opciones permitida
  *  lambda: funciones que trae el menu a mostrar
  */
-fun inputRequieredOptions(lblTitulo: String, lblError: String, opciones: Array<String>, showMenu: () -> Unit): String {
+fun inputRequieredOptions(
+    lblTitulo: String,
+    lblError: String,
+    opciones: Array<String>,
+    showMenu: () -> Unit
+): String {
 
     println()
     println(lblTitulo)
