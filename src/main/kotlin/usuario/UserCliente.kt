@@ -244,3 +244,13 @@ private fun agregando_carrito() {
 
     thread.start()
 }
+
+private fun comprando_productos() {
+    val thread = Thread(Runnable {
+        println("Compra en proceso...")
+        Thread.sleep(1400)
+        println("Se realizo la compra con exito.!")
+    })
+
+    thread.start()
+}
