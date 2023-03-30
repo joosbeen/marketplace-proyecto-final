@@ -155,12 +155,8 @@ class UserCliente(id: Long = Date().time, nombre: String, correo: String, contra
         }
 
         mensajeTitulo("MI CARRITO")
-        var total = 0f
-        carritoProductos.forEach {
-            total += it.precio
-            println("Clave: ${it.id}, Nombre: ${it.nombre}, Precio: $ ${it.precio}, Descripcion: ${it.descripcion}")
-        }
-        println("Total de compra: $total")
+        printDetail(carritoProductos)
+        println("Total de compra: ${reduceTotal(carritoProductos)}")
 
         menuClienteVerCarrito()
 
@@ -224,3 +220,15 @@ class UserCliente(id: Long = Date().time, nombre: String, correo: String, contra
 
 }
 
+val reduceTotal: (MutableList<Producto>) -> Float = {
+    var total = 0f;
+    it.forEach { total += it.precio }
+    total
+
+}
+
+val printDetail: (MutableList<Producto>) -> Unit = {
+    it.forEach {
+        println("Clave: ${it.id}, Nombre: ${it.nombre}, Precio: $ ${it.precio}, Descripcion: ${it.descripcion}")
+    }
+}
