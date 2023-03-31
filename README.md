@@ -1,7 +1,7 @@
 # PROYECTO FINAL BEDU
 ## _MARKETPLACE_
 
-### Integrantes de equipo
+### Integrantes de Equipo 8
 
 - Jesús Alexis Tenorio Hernández / alexistenorio1230@gmail.com
 - Liliana Rodriguez Rodriguez / Dgliliana.rodriguez@gmail.com
