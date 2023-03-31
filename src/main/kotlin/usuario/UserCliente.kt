@@ -9,7 +9,8 @@ import utileria.*
 import ventas.HistorialVentas
 import ventas.Venta
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
+
 
 /**
  * Clase hija de clase usuario.
